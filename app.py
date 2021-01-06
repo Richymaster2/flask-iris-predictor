@@ -8,10 +8,11 @@ from sklearn.model_selection import train_test_split
 import pickle
 
 app = Flask(__name__)
+Bootstrap(app)
 
 @app.route('/')
 def index():
-    return jsonify({"message":"Index Page"})
+    return render_template('index.html')
 
 @app.route('/predict')
 def predict():
