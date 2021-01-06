@@ -4,7 +4,7 @@
 {% block content %}
 <div class="container">
   <h3>Iris Dataset Predictor</h3>
-  <form class="form form-horizontal" method="post" role="form">
+  <form class="form form-horizontal" action="{{ url_for('predict') }}" method="post"  role="form">
     {{ form.hidden_tag() }}
     {{ wtf.form_errors(form, hiddens="only") }}
     {{ wtf.quick_form(form) }}
