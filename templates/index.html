@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Iris Dataset Predictor Flask App</title>
-</head>
-
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Predict Iris Dataset</h1>
-        </div>
-        <div class="input-form" method="POST" action="{{url_for('predict')}}">
-            <input type="text" name="SepalLength" placeholder="SepalLength" required="required" />
-            <input type="text" name="SepalWidth" placeholder="SepalWidth" required="required" />
-            <input type="text" name="PetalLength" placeholder="PetalLength" required="required" />
-            <input type="text" name="PetalWidth" placeholder="PetalWidth" required="required" />
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-        </div>
-        <br>
-    </div>
-</body>
-</html>
+# templates/registration.html
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+  <h3>Create your account</h3>
+  <hr>
+    {{ wtf.quick_form(form) }}
+  <hr>
+ 
+</div>
+{% endblock %}
